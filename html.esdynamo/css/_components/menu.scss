@@ -1,0 +1,10 @@
+$menu-bp:m;
+.main-header {
+	@include edContainer;
+	padding: 30px 0px;
+}
+.logo {
+	@include edItem(100);
+	//padding: 50px 0;
+	//background: url('../img/logo.png') 0 no-repeat;
+}

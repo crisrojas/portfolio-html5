@@ -1,0 +1,113 @@
+$cssCore: false;
+$cssHelpers: true;
+$devMode: false;
+@import 'ed-grid';
+@import "colors.scss";
+@import "spectre/spectre";
+@import "menu";
+@import "home.scss";
+@import "art.scss";
+@import "ui.scss"; 
+@import "blog.scss";
+@import "contact.scss";
+@import "404.scss"; 
+
+.grid-container {
+  @include grid('.grid-item', 1 2 3 4, 1.5em)
+}
+
+$body-bg: white;
+body {
+	background: $body-bg;
+	color: darken($body-bg,80);
+	font-family: 'Rubik', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+.main-footer {
+	@include stickyFooter;
+	text-align: center;
+	
+	i {
+		color: red;
+	}
+}
+
+.footer {
+	
+	@include stickyFooter;
+	padding: 20px;
+	background: darken(white,3);
+	text-align: center;
+	i {
+		color: red;
+	}
+}
+.footer a {
+	margin-right: 20px;
+	color: darken(white,35);
+	&:hover {color: $primary-color;}
+}
+.logo {
+	h1 {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+}
+
+// Illustrations
+
+.art {
+	
+	text-align: center;
+	@include from(m) {
+		padding: 150px;
+	}
+}
+.gallery {
+  @include grid('.image',2 2 3 4);
+}
+
+
+.illustration__content {
+	@include edContainer;
+}
+
+.illustration__description {
+	@include edItem(100);
+	
+	.return {
+		font-size: 30px;
+	}
+
+}
+
+.illustration__image {
+	@include edItem(100);
+	//@include crossCenter;
+	//background: #F5F2EB;
+}
+
+//
+
+// Incubating
+
+.incubating__content {
+	@include edContainer;
+	&__info {
+		@include edItem(100);
+		text-align: center;
+		padding: 15%;
+	}
+}
+
+//
+
+
+

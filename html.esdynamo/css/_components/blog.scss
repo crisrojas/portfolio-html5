@@ -1,0 +1,30 @@
+.blog {
+	text-align: center;
+	padding: 30px 10px;
+	h2 { 
+		margin-bottom: 35px;
+		font-size: 25px;
+		a {color: black;&:hover {color: $primary-color;}}
+	}
+	
+}
+.pages {
+	text-align: inherit;
+	//background: black;
+	.button {
+		background: $primary-color;
+		color: white;
+		border-radius: 5px;
+		&:hover {
+			background: black;
+		}
+	}
+}
+
+.article {
+	@include edContainer;
+}
+
+.article__content {
+	@include edItem(100);
+}
